@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text will be hidden initially.
+  </div>
+  <button onclick="showText()">Show Text</button>
+
+  <script>
+    function showText() {
+      // Missing a crucial part: selecting the element before manipulating it. This leads to a silent failure.
+      document.getElementById('myDiv').style.display = 'block'; 
+    }
+  </script>
+</body>
+</html>
