@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text will be hidden initially.
+  </div>
+  <button onclick="showText()">Show Text</button>
+
+  <script>
+    function showText() {
+      const div = document.getElementById('myDiv');
+      if (div) {
+        div.style.display = 'block';
+      } else {
+        console.error("Element with id 'myDiv' not found.");
+      }
+    }
+  </script>
+</body>
+</html>
